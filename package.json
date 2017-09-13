@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/raghav96/mkdecision#readme",
   "dependencies": {
-    "ghost": "^1.8.5"
+    "ghost": "^1.8.5",
+    "n": "^2.1.8",
+    "sqlite3": "^3.1.11"
   }
 }
