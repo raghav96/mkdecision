@@ -657,6 +657,54 @@ pre code {
   padding-left: 0;
 }
 
+/* Custom column CSS */
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.clear-sides {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0px;
+    margin-right: 0px; 
+}
+.col-3-custom {
+    width: calc((100vw / 3 )); 
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+}  
+
+.col-4-custom {
+    width: calc((100vw / 4 )); 
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+}
+    
+.col-3-SSN {
+    width: calc((100vw / 3 )); 
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    border: 1px solid red;
+}  
+
+.col-4-SSN {
+    width: calc((100vw / 6 )); 
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+    border: 1px solid red;
+
+} 
+/* end */
+
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
 .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,
 .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,
@@ -8139,9 +8187,9 @@ a.text-warning:focus, a.text-warning:hover {
   color: #d39e00 !important;
 }
 
-.text-danger {
+/*.text-danger {
   color: #dc3545 !important;
-}
+}*/
 
 a.text-danger:focus, a.text-danger:hover {
   color: #bd2130 !important;
