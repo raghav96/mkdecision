@@ -444,7 +444,7 @@ body {
     section#services .form-group input,
     section#services .form-group textarea,
     section#services select {
-    padding: 8px;
+    padding: 15px;
     border: 0px;
     border-bottom: 1px solid grey;
     -webkit-border-radius: 0;
@@ -457,9 +457,30 @@ body {
     section#services .form-group textarea.form-control  {
       height: 236px; }
 
+    .label-helper {
+    position: absolute;
+    opacity: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    display: none; }
+
     section#services .form-control:focus {
-    border: 2px solid blue;
+    border: 2px solid #bf2155;
+    padding: 13px;
+    }
+
+    section#services .form-control:focus + label {
+    text-align: center;
+    color: white;
+    background-color: #bf2155;
+    width: 95%;
+    bottom: 95%;
+    left: 2%;
+    padding: 13px;
+    border-radius: 5px;
     box-shadow: none;
+    opacity: 1;
     }
 
     #options {
@@ -640,6 +661,10 @@ font-family: "Open Sans",sans-serif;
     background-color: #e6e6e6;
 }
 
+#footer-seo h6 {
+    padding: 10px 0px 10px 0px;
+    font-weight: 400;
+}
 #footer-seo a{
     color: #0099ff;
 }
@@ -755,6 +780,15 @@ font-family: "Open Sans",sans-serif;
     height: 50px;
 }
 
+#prequal-div li {
+    height: 19px;
+    margin: 10px 0; 
+    background: url('../img/checkmark.png') no-repeat left center;
+    background-size: 20px;
+    list-style: none; 
+    padding-left: 25px; 
+    line-height: 20px; 
+}
 
 
 

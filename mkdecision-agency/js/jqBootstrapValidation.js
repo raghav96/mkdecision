@@ -482,15 +482,15 @@
                     (settings.options.prependExistingHelpBlock ? $helpBlock.data("original-contents") : ""));
                 } else {
                   // Multiple? Being sloppy? Glue them together into an UL.
-                  $helpBlock.html("<ul role=\"alert\"><li>" + errorsFound.join("</li><li>") + "</li></ul>" +
-                    (settings.options.prependExistingHelpBlock ? $helpBlock.data("original-contents") : ""));
+                    $helpBlock.css("display", "block");
+                  $helpBlock.html(errorsFound.join("</li>") +                 (settings.options.prependExistingHelpBlock ? $helpBlock.data("original-contents") : ""));
                 }
               } else {
-                $controlGroup.removeClass("warning error success");
+               /* $controlGroup.removeClass("warning error success");
                 if (value.length > 0) {
                   $controlGroup.addClass("success");
                 }
-                $helpBlock.html($helpBlock.data("original-contents"));
+                $helpBlock.html($helpBlock.data("original-contents"));*/
               }
 
               if (e.type === "blur") {
