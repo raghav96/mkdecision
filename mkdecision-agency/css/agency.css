@@ -25,6 +25,10 @@ h6 {
   font-family: "Open Sans",sans-serif;
   text-transform: none; }
 
+/* Removes text deco for navbar when hovering */
+a:-webkit-any-link{
+    text-decoration: none;
+}
 section {
   padding: 100px 0; }
   section h2.section-heading {
@@ -65,7 +69,6 @@ body {
    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); }
 }
 
-
   #mainNav .navbar-toggler {
     font-size: 12px;
     right: 0;
@@ -98,8 +101,8 @@ body {
     padding-top: 5px;
     padding-bottom: 5px;
     background: #003399; 
-    opacity: 0.9;} /* Opacity affects both side menu & header */
-    
+    opacity: 0.9;} 
+
     #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.25em;
     padding: 12px 0; } 
@@ -144,7 +147,7 @@ body {
     padding-top: 5px;
     padding-bottom: 5px;
     background: #003399; 
-    opacity: 0.9;}
+    opacity: .9;}
     
     #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.25em;
@@ -444,22 +447,53 @@ body {
     section#services .form-group input,
     section#services .form-group textarea,
     section#services select {
-    padding: 8px;
+    padding: 10px 12px 10px 12px;
     border: 0px;
+        height: auto;
     border-bottom: 1px solid grey;
     -webkit-border-radius: 0;
      -moz-border-radius: 0;
           border-radius: 0;}
 
-    section#services .form-group input.form-control{
-      height: auto; }
-
     section#services .form-group textarea.form-control  {
       height: 236px; }
 
+    #correction-div{
+    border: 2px solid #bf2155;
+    background: white;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: "Open Sans",sans-serif;
+    color: #bf2155;
+    text-align: center;
+    padding: 10px;
+    }
+
+    .label-helper {
+    position: absolute;
+    opacity: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    display: none;
+    padding: 13px;
+    }
+
     section#services .form-control:focus {
     border: 2px solid blue;
+    }
+
+    section#services .form-control:focus + .label-helper {
+    text-align: center;
+    color: white;
+    background-color: #bf2155;
+    width: 95%;
+    bottom: 95%;
+    left: 2.5%;
+    border-radius: 5px;
     box-shadow: none;
+    opacity: 1;
+    z-index: 1;
     }
 
     #options {
@@ -628,27 +662,31 @@ font-family: "Open Sans",sans-serif;
 font-family: "Open Sans",sans-serif;
     font-size: 18px;
     text-align: center;
-    background-color: #e6e6e6;
+    background-color: #F7F7F7;
     padding-bottom: 15px;
 }
 
 #footer-seo{
     padding: 40px 20px;
-font-family: "Open Sans",sans-serif;
+    font-family: "Open Sans",sans-serif;
     font-size: 12px;
     text-align: left;
-    background-color: #e6e6e6;
+    background-color: #F7F7F7;
 }
 
+#footer-seo h6 {
+    padding: 10px 0px 10px 0px;
+    font-weight: 400;
+}
 #footer-seo a{
-    color: #0099ff;
+    color: #126bc5;
+    text-decoration: underline;
 }
-
 
 #footer-copyrights{
     padding: 20px 40px 10px 40px;
     font-family: "Open Sans",sans-serif;
-    font-size: 12px;
+    font-size: .7em;
     text-align: center;
     background-color: white;
 }
@@ -662,6 +700,7 @@ font-family: "Open Sans",sans-serif;
     padding: 0px;
     list-style-type: none;
     font-size: 10px;
+    display: inline;
 }
 
 .footer-copyrights-links a {
@@ -681,6 +720,11 @@ font-family: "Open Sans",sans-serif;
     text-transform: none; 
 }
 
+ .fixedPosition
+ {
+    position: fixed;
+ }
+
 .sidenav {
     height: 100%;
     width: 0;
@@ -691,26 +735,60 @@ font-family: "Open Sans",sans-serif;
     background-color: #111;
     overflow-x: hidden;
     padding-top: 80px;
+    opacity: 1;
 }
 
 .sidenav a {
-    padding: 8px 8px 8px 8px;
+    padding: 8px 8px 8px 20px;
     text-decoration: none;
     font-size: 14px;
     color: white;
     display: block;
-        transition-duration: 3s;
-
+    transition-duration: 3s;
 }
+/* CSS to animate the transition when the side nav is opened */
+    .animated {
+    padding-left: 200px;
+    -webkit-animation-duration: 1000ms;
+    animation-duration: 1000ms;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    }
+         
+ @-webkit-keyframes fadeInLeft {
+    0% {
+       opacity: 0;
+       -webkit-transform: translateX(-20px);
+    }
+    100% {
+       opacity: 1;
+       -webkit-transform: translateX(0);
+    }
+ }
+
+ @keyframes fadeInLeft {
+    0% {
+       opacity: 0;
+       transform: translateX(-20px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateX(0);
+    }
+ }
+
+ .fadeInLeft {
+ -webkit-animation-name: fadeInLeft;
+ animation-name: fadeInLeft;
+ } 
 
 .sidenav .closebtn {
     position: absolute;
     top: 0;
-    right: 25px;
+    right: 5px;
     font-size: 36px;
     margin-left: 50px;
 }
-
 
 .sidebar-title {
     background: #111;
@@ -728,7 +806,6 @@ font-family: "Open Sans",sans-serif;
 .sidebar-div a {
     position: relative;
 }
-
 
 .sidebar-div:hover {
     background: #8c8c8c; 
@@ -755,6 +832,15 @@ font-family: "Open Sans",sans-serif;
     height: 50px;
 }
 
+#prequal-div li {
+    height: 19px;
+    margin: 10px 0; 
+    background: url('../img/checkmark.png') no-repeat left center;
+    background-size: 20px;
+    list-style: none; 
+    padding-left: 25px; 
+    line-height: 20px; 
+}
 
 
 
