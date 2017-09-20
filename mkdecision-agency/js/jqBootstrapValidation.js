@@ -11,7 +11,9 @@
 (function($) {
 
   var createdElements = [];
-
+    var num_errors = 0; //variable to insert direction **inefficient way**
+    options:{min:1}
+    
   var defaults = {
     options: {
       prependExistingHelpBlock: false,
@@ -20,6 +22,7 @@
       submitError: false, // function called if there is an error when trying to submit
       submitSuccess: false, // function called just before a successful submit event is sent to the server
       semanticallyStrict: false, // set to true to tidy up generated HTML output
+     
       autoAdd: {
         helpBlocks: true
       },
@@ -437,6 +440,7 @@
               });
             }
           );
+            
           $this.bind(
             [
               "keyup",
@@ -472,6 +476,12 @@
 
               // Were there any errors?
               if (errorsFound.length) {
+                  //inefficient ?? way of inserting warning 
+                  if (num_errors < errorsFound.length)
+                      {
+                           $("<div id=\"correction-div\">Please correct highlighted fields.</div><p></p>").insertAfter("#get-started");
+                          num_errors = 10;
+                      }
                 // Better flag it up as a warning.
                 $controlGroup.removeClass("success error").addClass("warning");
 
@@ -481,16 +491,20 @@
                   $helpBlock.html(errorsFound[0] +
                     (settings.options.prependExistingHelpBlock ? $helpBlock.data("original-contents") : ""));
                 } else {
-                  // Multiple? Being sloppy? Glue them together into an UL.
-                  $helpBlock.html("<ul role=\"alert\"><li>" + errorsFound.join("</li><li>") + "</li></ul>" +
-                    (settings.options.prependExistingHelpBlock ? $helpBlock.data("original-contents") : ""));
+                  //Display labels that contain warnings
+                  $helpBlock.css("display", "block");
+                  //Targets previous input to include a warning border
+                  $helpBlock.prev("input").css("border", "2px solid #bf2155");
+                    
+                // Multiple? Being sloppy? Glue them together into an UL.
+                  $helpBlock.html(errorsFound.join("</li>") +                 (settings.options.prependExistingHelpBlock ? $helpBlock.data("original-contents") : ""));
                 }
               } else {
-                $controlGroup.removeClass("warning error success");
+               /* $controlGroup.removeClass("warning error success");
                 if (value.length > 0) {
                   $controlGroup.addClass("success");
                 }
-                $helpBlock.html($helpBlock.data("original-contents"));
+                $helpBlock.html($helpBlock.data("original-contents"));*/
               }
 
               if (e.type === "blur") {
