@@ -2047,6 +2047,7 @@ fieldset[disabled] a.btn {
   color: #fff;
   background-color: #28a745;
   border-color: #28a745;
+  border-radius: 5px;
 }
 
 .btn-success:hover {
@@ -3656,19 +3657,44 @@ tbody.collapse.show {
       flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
+  background-color: transparent;
+  background-clip: border-box;
+  border: none;
+}
+
+.card-featured {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
   background-color: #fff;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
+  border-bottom: 4px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.55rem;
+}
+
+.card-body-featured {
+  -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+  padding: .6rem 1.25rem 1.25rem 1.25rem;
+  font-size: .8em;
 }
 
 .card-body {
   -ms-flex: 1 1 auto;
       flex: 1 1 auto;
-  padding: 1.25rem;
+  padding: 1.25rem 1.25rem .75rem 1.25rem;
+  font-size: .8em;
 }
 
 .card-title {
+  font-size: 1.2em;
+  font-weight: 700;
+  padding-top: 0;
   margin-bottom: 0.75rem;
 }
 
@@ -3700,10 +3726,12 @@ tbody.collapse.show {
 }
 
 .card-header {
-  padding: 0.75rem 1.25rem;
+  color: #0A72BE;
+  text-transform: uppercase;
+  font-size: .8em;
+  font-weight: 600;
+  padding: 0.75rem 1.25rem 0rem 1.25rem;
   margin-bottom: 0;
-  background-color: rgba(0, 0, 0, 0.03);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
 }
 
 .card-header:first-child {
@@ -4633,7 +4661,6 @@ button.close {
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 0.3rem;
   outline: 0;
 }
 
@@ -4662,20 +4689,31 @@ button.close {
       align-items: center;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  padding: 15px;
-  border-bottom: 1px solid #e9ecef;
+  padding: 5px 0px 15px 15px;
+}
+
+.modal-header button {
+    background: #eee;
+    color: grey;
+    top: 0;
+    right: 0;
+    font-size: .8em;
+    padding: 1rem;
 }
 
 .modal-title {
+  font-size: .8em;
+  font-weight: 700;
   margin-bottom: 0;
-  line-height: 1.5;
+  line-height: 1;
 }
 
 .modal-body {
   position: relative;
   -ms-flex: 1 1 auto;
       flex: 1 1 auto;
-  padding: 15px;
+padding: 0rem 2rem 2rem 2rem;
+
 }
 
 .modal-footer {

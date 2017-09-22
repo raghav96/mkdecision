@@ -7,18 +7,36 @@ body {
   overflow-x: hidden;
   font-family: "Open Sans",sans-serif; }
 
-
-
 section {
   padding: 60px 0px 0px 0px; }
  
+
+.card-header-img {
+   display: none;
+    }
 /*
 @media (min-width: 768px) {
-  section {
-    padding: 60px 0; } }*/
+    #mainNav {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border: none;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background: #353C44; }
+}*/
 
 
 @media (min-width: 992px) {
+  .card-header-img {
+    display: block;
+    top: 0;
+    left: 0;
+    background-image:url("img/freedom_unlimited_logo_ext.jpg"); background-repeat: repeat;
+    width: 400%;
+    }
+}
+
+@media (min-width: 768px) {
   #mainNav {
     padding-top: 25px;
     padding-bottom: 25px;
@@ -48,7 +66,7 @@ section {
     display: block;
     transition-duration: 3s;
 }
-    
+
  
 .sidenav .closebtn {
     position: absolute;
@@ -90,7 +108,8 @@ section {
     background: #111;
     color: white;
     font-size: 10px;
-}   
+}
+}
     .breadcrumbs {
         padding-top: 15px;
         font-size: .9em;
@@ -130,6 +149,14 @@ section {
         padding-top: 40px;
         padding-bottom: 5px;
         border-bottom: 1px solid #e6e6e6;
+        position:relative;
+    }
+    
+    .reviews h2 span {
+        position:absolute;
+        bottom:.4rem;
+        right:0;
+        font-size: .7em;
     }
     
     .benefits-list h3{
@@ -209,10 +236,10 @@ section {
     border-color: #3a9d5d; }
     
 .btn-primary {
-    color: blue;
+    color: #0b6efd;
     background-color: transparent;
     padding: 10px 15px;
-    border: 1px solid blue;
+    border: 1px solid #0b6efd;
     border-radius: 5px;
     text-align: center;
     text-decoration: none;
@@ -221,7 +248,7 @@ section {
     
   .btn-primary:hover {
     color: #fff;
-    background-color: blue;
+    background-color: #0b6efd;
      cursor:pointer;
      }
 
@@ -376,7 +403,7 @@ section {
     }
     
     .reviews {
-        padding: 0px 40px;
+        padding: 0px 40px 20px 60px;
         margin: 0;
         background-color: #ededed;
     }
