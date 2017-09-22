@@ -23,6 +23,8 @@
     <!-- Custom styles for this template -->
     <link href="css/agency.css" rel="stylesheet">
     <link href="css/icomoon.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    
   </head>
 
   <body id="page-top">
@@ -35,8 +37,8 @@
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <i class="fa fa-bars"></i>
         </button>
-          
-          <!--Side bar-->
+          -->
+        <!-- Side bar-->
         <div id="mySidenav" class="sidenav">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
              <div class="sidebar-div"><a href="#">Home</a></div>
@@ -75,23 +77,20 @@
             <div class="sidebar-others"><a href="#">Fair Lending</a></div>
           </div>
           
-          <div class="container clear-sides"> <a href="#page-top">
-            <div class="row">
-                 <div class="col-3-custom">
-                 <span style="font-size:30px; color: white; cursor:pointer;" onclick="openNav()">&#9776;</span>
+          <div class="container">
+              <div class="row">
+                <div class="sidenav-button pull-left">
+                  <span style="font-size:30px; color: white; cursor:pointer;" onclick="openNav()">&#9776;</span>
                 </div>
-                
-                 <div class="col-4-custom" style="display: flex; justify-content: center;">
-                <div style="padding-top: 6px;" id="mklogo">
-                <img src="img/logos/mk-logo-2.png" class="img-responsive">
+                  
+                <div class="sidenav-brand col-md-8">
+                    <div id="mklogo">
+                      <img src="img/logos/mk-logo-2.png" class="img-responsive">
+                    </div>
+                    <!--<img src="img/logos/mk-logo.png" class="img-responsive">-->
                 </div>
-                <div style="width: auto; overflow:hidden;" id="header-logo">
-                <img src="img/logos/mk-logo.png" class="img-responsive"> 
-                </div>
-                </div>
-               
-            </div>   </a>
-        </div>
+            </div>
+          </div>
 
         <!--<div class="collapse navbar-collapse" id="navbarResponsive"><button>
           <i class="fa fa-bars"></i>
@@ -121,11 +120,10 @@
 
     <!-- Services -->
     <section id="services">
-      <div class="container">
-       
+      <div class="container pad-down">
         <div class="row">
           <div class="col-md-6" id="prequal-div">
-            <h3 class="service-heading">SEE IF YOU PRE-QUALIFY TODAY!</h3>
+            <h2 class="service-heading">See if you prequalify today!</h2>
             <ul>
               <li>Only takes a moment</li>
               <li>Won't impact your credit score</li>
@@ -136,36 +134,43 @@
           </div>
           <div class="col-md-6">
           
-            <h5 class="service-heading" id="get-started">Get Started:</h5>
+            <h2 id="get-started">Get Started:</h2>
             <form id="contactForm" name="sentMessage" novalidate>
                <div class="row">
-                    <div class="col-md-12">
-                  <div class="form-group">
-                    <input class="form-control" id="firstname" type="text" maxlength="35" placeholder="First Name" required data-validation-required-message="Please enter your first name.">
-                    <label class="help-block text-danger label-helper"></label>
-                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <input class="form-control" id="firstname" type="text" maxlength="35" placeholder="First Name" required data-validation-required-message="Please enter your first name.">
+                      <label class="help-block text-danger label-helper"></label>
                     </div>
+                  </div>
                 </div>
-                  <div class= "row">
-                    <div class="col-md-12">
-                  <div class="form-group">
-                    <input class="form-control" id="lastname" type="text" maxlength="35" placeholder="Last Name" required data-validation-required-message="Please enter your last name.">
-                    <label class="help-block text-danger label-helper"></label>
-                  </div>  </div>
-                </div>  <div class= "row">
-                    <div class="col-md-12">
-                  <div class="form-group">
-                    <input class="form-control" id="address" type="text" maxlength="70" placeholder="Street Address" required data-validation-required-message="Please enter your street address.">
-                    <label class="help-block text-danger label-helper"></label>
-                  </div>   </div>  </div><div class= "row">
-                    <div class="col-md-12">
-                <div class="form-group">
-                    <input class="form-control" id="city" type="text" maxlength="35" placeholder="City" required data-validation-required-message="Please enter your city.">
-                    <label class="help-block text-danger label-helper"></label>
-                  </div></div></div>
+                <div class= "row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <input class="form-control" id="lastname" type="text" maxlength="35" placeholder="Last Name" required data-validation-required-message="Please enter your last name.">
+                      <label class="help-block text-danger label-helper"></label>
+                    </div>  
+                  </div>
+                </div>  
+                <div class= "row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <input class="form-control" id="address" type="text" maxlength="70" placeholder="Street Address" required data-validation-required-message="Please enter your street address.">
+                      <label class="help-block text-danger label-helper"></label>
+                    </div>
+                  </div>  
+                </div>
+                <div class= "row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                        <input class="form-control" id="city" type="text" maxlength="35" placeholder="City" required data-validation-required-message="Please enter your city.">
+                        <label class="help-block text-danger label-helper"></label>
+                    </div>
+                  </div>
+                </div>
                 <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
+                  <div class="col-md-6">
+                    <div class="form-group">
                       <select class="form-control" name="options" id="options" required data-validation-required-message="Please enter your state.">
                         <option value ="">-- Select State --</option>
                         <option value="AL">Alabama</option>
@@ -231,31 +236,23 @@
                   </div>
                 </div>
                 
-                </div>
-              
-            <div class="row">
-                
-                <div class="col-md-5">
-                       <label id="ssn-label">Last 4 Digits of SSN# :</label>
-                </div>
-                <div class="col-md-3">
-                       <label id="ssn-label"><b>XXX - XX -</b></label>
-                </div>
-                <div class="col-md-4">
+              </div>
+              <div class="row">
+                <div class="col-md-12">
                   <div class="form-group">
-                     <input class="form-control" id="ssn" type="text" maxlength="4" placeholder="XXXX" required data-validation-required-message="Please enter the last 4 digits of your SSN.">
+                    <input class="form-control" id="ssn" type="password" maxlength="4" placeholder="Last 4 Digits of SSN" required data-validation-required-message="Please enter last 4 digits of SSN.">
                     <label class="help-block text-danger label-helper"></label>
                   </div>
                 </div>
-            </div>
+              </div>
 
-   
-             <div class="col-md-12">
-              <div class="form-group">
-                <div class="checkbox">
-                  <label><input type="checkbox" id="check"> I understand that this is not a credit card application and that the process of checking to see if I have an offer will not affect my credit score. Upon responding to an offer, Chase will review my credit report.</label>
+             <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <div class="checkbox">
+                    <label><input type="checkbox" id="check"><strong> I understand that this is not a credit card application and that the process of checking to see if I have an offer will not affect my credit score. Upon responding to an offer, MK Decision will review my credit report.</strong></label>
+                  </div>
                 </div>
-               </div>
             </div>
             <div class="clearfix"></div>
             <div class="col-lg-12 text-center">
@@ -424,22 +421,22 @@
             
         <ul class="footer-copyrights-links">
             <li>
-               <a class=" chaseanalytics-track-link" href="https://www.chase.com/resources/about-chase" data-pt-name="fm_aboutchase">About Chase</a>
+               <a class=" chaseanalytics-track-link" href="#" data-pt-name="fm_aboutchase">About Chase</a>
             </li>
             <li>
-               <a class=" chaseanalytics-track-link" href="http://www.jpmorganchase.com/" data-pt-name="fm_jpmorgan"> J.P. Morgan</a>
+               <a class=" chaseanalytics-track-link" href="#" data-pt-name="fm_jpmorgan"> J.P. Morgan</a>
             </li>
             <li>
-               <a class=" chaseanalytics-track-link" href="https://www.jpmorgan.com/pages/jpmorgan" data-pt-name="fm_jpmorganchase">JPMorgan Chase &amp; Co.</a>
+               <a class=" chaseanalytics-track-link" href="#" data-pt-name="fm_jpmorganchase">JPMorgan Chase &amp; Co.</a>
             </li>
             <li>
-               <a class=" chaseanalytics-track-link" href="https://www.careersatchase.com/" data-pt-name="fm_careers">Careers</a>
+               <a class=" chaseanalytics-track-link" href="#" data-pt-name="fm_careers">Careers</a>
             </li>
             <li>
-               <a class=" chaseanalytics-track-link" href="https://www.chase.com/online/canada/canada-home-en.htm" data-pt-name="fm_chasecanada">Chase Canada</a>
+               <a class=" chaseanalytics-track-link" href="#" data-pt-name="fm_chasecanada">Chase Canada</a>
             </li>
             <li>
-               <a class=" chaseanalytics-track-link" href="https://www.chase.com/resources/sitemap" data-pt-name="fm_sitemap">Site Map</a>
+               <a class=" chaseanalytics-track-link" href="#" data-pt-name="fm_sitemap">Site Map</a>
             </li>
             <li><span>Member FDIC</span></li><li><span>Equal Housing Lender</span>
           </li>
