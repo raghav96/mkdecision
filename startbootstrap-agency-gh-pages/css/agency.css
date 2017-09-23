@@ -148,6 +148,7 @@ body {
         padding: 12px 0; } }
 
 
+<<<<<<< HEAD
 
 
 #main {
@@ -189,6 +190,8 @@ body {
 }
 
 
+=======
+>>>>>>> 26b71c0fc852f03daea7787c66fea84765c85129
 /*
 
 header.masthead {
@@ -239,9 +242,82 @@ header.masthead {
 */
 
 
+<<<<<<< HEAD
 /*.sidebar-div a ,.active{
     
     
+=======
+
+
+
+
+
+#sidebarCollapse {
+    width: 40px;
+    height: 40px;
+    background: red;
+}
+
+#sidebarCollapse span {
+    width: 80%;
+    height: 2px;
+    margin: 0 auto;
+    display: block;
+    background: #555;
+    transition: all 0.8s cubic-bezier(0.810, -0.330, 0.345, 1.375);
+}
+
+
+#sidebarCollapse span:first-of-type {
+    /* rotate first one */
+    transform: rotate(45deg) translate(2px, 2px);
+}
+#sidebarCollapse span:nth-of-type(2) {
+    /* second one is not visible */
+    opacity: 0;
+}
+#sidebarCollapse span:last-of-type {
+    /* rotate third one */
+    transform: rotate(-45deg) translate(1px, -1px);
+}
+
+
+#sidebarCollapse.active span {
+    /* no rotation */
+    transform: none;
+    /* all bars are visible */
+    opacity: 1;
+    margin: 5px auto;
+}
+
+
+.wrapper {
+    display: flex;
+    align-items: stretch;
+    perspective: 1500px; /* Define how many pixels the sidebar is placed from the view. */
+}
+
+#sidebar {
+    
+    min-width: 250px;
+    max-width: 250px;
+    background: #414042;
+    color: #fff;
+    transition: all 0.6s cubic-bezier(0.945, 0.020, 0.270, 0.665);
+    transform-origin: center left; /* Set the transformed position of sidebar to center left side. */
+}
+
+#sidebar.active {
+    margin-left: -250px;
+    transform: rotateY(100deg); /* Rotate sidebar vertically by 100 degrees. */
+    
+}
+
+
+.sidebar-div a ,.active{
+    
+    background-color: darkgrey;
+>>>>>>> 26b71c0fc852f03daea7787c66fea84765c85129
     display:block;
 }
     
@@ -250,7 +326,52 @@ header.masthead {
     display:block;
 }
 
+<<<<<<< HEAD
 */
+=======
+
+
+media (max-width: 768px) {
+    /* Reversing the behavior of the sidebar: 
+       it'll be rotated vertically and off canvas by default, 
+       collapsing in on toggle button click with removal of 
+       the vertical rotation.   */
+    #sidebar {
+        margin-left: -250px;
+        transform: rotateY(100deg);
+    }
+    #sidebar.active {
+        margin-left: 0;
+        transform: none;
+    }
+
+    /* Reversing the behavior of the bars: 
+       Removing the rotation from the first,
+       last bars and reappear the second bar on default state, 
+       and giving them a vertical margin */
+    #sidebarCollapse span:first-of-type,
+    #sidebarCollapse span:nth-of-type(2),
+    #sidebarCollapse span:last-of-type {
+        transform: none;
+        opacity: 1;
+        margin: 5px auto;
+    }
+
+    /* Removing the vertical margin and make the first and last bars rotate again when the sidebar is open, hiding the second bar */
+    #sidebarCollapse.active span {
+        margin: 0 auto;
+    }
+    #sidebarCollapse.active span:first-of-type {
+        transform: rotate(45deg) translate(2px, 2px);
+    }
+    #sidebarCollapse.active span:nth-of-type(2) {
+        opacity: 0;
+    }
+    #sidebarCollapse.active span:last-of-type {
+        transform: rotate(-45deg) translate(1px, -1px);
+    }
+}
+>>>>>>> 26b71c0fc852f03daea7787c66fea84765c85129
 
 
 
@@ -278,8 +399,11 @@ font-family: "Open Sans",sans-serif;
 
 {
  list-style-image: url('../img/tick.png');
+<<<<<<< HEAD
     padding-right: 30px;
     
+=======
+>>>>>>> 26b71c0fc852f03daea7787c66fea84765c85129
 }
 
 
@@ -426,7 +550,11 @@ font-family: "Open Sans",sans-serif;
     min-height: 50px;
     margin-bottom: 50px; }
     .timeline > li:after, .timeline > li:before {
+<<<<<<< HEAD
       display: table;  <!-- Sidebar Links -->
+=======
+      display: table;
+>>>>>>> 26b71c0fc852f03daea7787c66fea84765c85129
       content: ' '; }
     .timeline > li:after {
       clear: both; }
@@ -556,6 +684,7 @@ font-family: "Open Sans",sans-serif;
   .team-member p {
     margin-top: 0; }
 
+<<<<<<< HEAD
 
 section#services {
       background-color: #FFF;
@@ -613,6 +742,58 @@ section#services #contactForm
 
 
   
+=======
+section#contact {
+  background-color: #222222;
+    
+    /*background-image: url("../img/map-image.png");*/
+  background-repeat: no-repeat;
+  background-position: center; }
+  section#contact .section-heading {
+    color: white; }
+  section#contact .form-group background-image: url("../img/map-image.png");
+
+  
+  section#contact .form-group {
+    margin-bottom: 25px; }
+    section#contact .form-group input,
+    section#contact .form-group textarea {
+      padding: 20px; }
+    section#contact .form-group input.form-control {
+      height: auto; }
+    section#contact .form-group textarea.form-control {
+      height: 236px; }
+  section#contact .form-control:focus {
+    border-color: #fed136;
+    box-shadow: none; }
+  section#contact ::-webkit-input-placeholder {
+    font-weight: 700;
+    color: #eeeeee;
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-transform: uppercase; }
+  section#contact :-moz-placeholder {
+    font-weight: 700;
+    color: #eeeeee;
+    /* Firefox 18- */
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-transform: uppercase; }
+      
+      
+  section#contact ::-moz-placeholder {
+    font-weight: 700;
+    color: #eeeeee;
+    /* Firefox 19+ */
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-transform: uppercase; }
+  section#contact :-ms-input-placeholder {
+    font-weight: 700;
+    color: #eeeeee;
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-transform: uppercase; }
+  section#contact .text-danger {
+    color: #e74c3c; }
+      
+>>>>>>> 26b71c0fc852f03daea7787c66fea84765c85129
       
       footer {
   padding: 25px 0;
@@ -720,13 +901,22 @@ ul.social-buttons {
       background-color: plum; }
 
 .text-primary {
+<<<<<<< HEAD
   color: blue!important; }
+=======
+  color: #fed136 !important; }
+>>>>>>> 26b71c0fc852f03daea7787c66fea84765c85129
 
 .btn-primary {
   font-weight: 700;
   color: white;
+<<<<<<< HEAD
   border-color: #000;
   background-color: #000;
+=======
+  border-color: #fed136;
+  background-color: #fed136;
+>>>>>>> 26b71c0fc852f03daea7787c66fea84765c85129
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase; }
   .btn-primary.focus, .btn-primary:focus {
@@ -763,6 +953,7 @@ ul.social-buttons {
     background-color: white; }
 
 .btn-xl {
+<<<<<<< HEAD
   font-size: 16px;
   font-weight: 700;
   padding: 10px 15px;
@@ -770,10 +961,20 @@ ul.social-buttons {
   color: white;
   border-color: #0099ff;
   background-color: #0099ff;
+=======
+  font-size: 18px;
+  font-weight: 700;
+  padding: 20px 40px;
+  border-radius: 3px;
+  color: white;
+  border-color: #fed136;
+  background-color: #fed136;
+>>>>>>> 26b71c0fc852f03daea7787c66fea84765c85129
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase; }
   .btn-xl.focus, .btn-xl:focus {
     color: white;
+<<<<<<< HEAD
     border-color: #0099ff;
     background-color: #0099ff; }
   .btn-xl:hover {
@@ -785,11 +986,25 @@ ul.social-buttons {
     color: white;
     border-color: #0099ff;
     background-color: #0099ff; }
+=======
+    border-color: #b48b01;
+    background-color: #fec503; }
+  .btn-xl:hover {
+    color: white;
+    border-color: #f6bf01;
+    background-color: #fec503; }
+  .btn-xl.active, .btn-xl:active,
+  .open > .btn-xl.dropdown-toggle {
+    color: white;
+    border-color: #f6bf01;
+    background-color: #fec503; }
+>>>>>>> 26b71c0fc852f03daea7787c66fea84765c85129
     .btn-xl.active.focus, .btn-xl.active:focus, .btn-xl.active:hover, .btn-xl:active.focus, .btn-xl:active:focus, .btn-xl:active:hover,
     .open > .btn-xl.dropdown-toggle.focus,
     .open > .btn-xl.dropdown-toggle:focus,
     .open > .btn-xl.dropdown-toggle:hover {
       color: white;
+<<<<<<< HEAD
       border-color: #007acc;
       background-color: #007acc; }
   .btn-xl.active, .btn-xl:active,
@@ -801,14 +1016,31 @@ ul.social-buttons {
   fieldset[disabled] .btn-xl:hover {
     border-color: grey;
     background-color: grey; }
+=======
+      border-color: #b48b01;
+      background-color: #dcab01; }
+  .btn-xl.active, .btn-xl:active,
+  .open > .btn-xl.dropdown-toggle {
+    background-image: none; }
+  .btn-xl.disabled.focus, .btn-xl.disabled:focus, .btn-xl.disabled:hover, .btn-xl[disabled].focus, .btn-xl[disabled]:focus, .btn-xl[disabled]:hover,
+  fieldset[disabled] .btn-xl.focus,
+  fieldset[disabled] .btn-xl:focus,
+  fieldset[disabled] .btn-xl:hover {
+    border-color: #fed136;
+    background-color: #fed136; }
+>>>>>>> 26b71c0fc852f03daea7787c66fea84765c85129
   .btn-xl .badge {
     color: #fed136;
     background-color: white; }
 
+<<<<<<< HEAD
 
 
 
 
+=======
+      
+>>>>>>> 26b71c0fc852f03daea7787c66fea84765c85129
       
 #socialmedia{
     padding: 20px;

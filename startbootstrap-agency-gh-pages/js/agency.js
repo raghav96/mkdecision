@@ -35,9 +35,12 @@
     }
   });
 
+<<<<<<< HEAD
    
      
    
     
     
+=======
+>>>>>>> 26b71c0fc852f03daea7787c66fea84765c85129
 })(jQuery); // End of use strict

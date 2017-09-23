@@ -181,7 +181,11 @@
             }
             // ---------------------------------------------------------
             //                                                     EMAIL
+<<<<<<< HEAD
             // -----------validation.js----------------------------------------------
+=======
+            // ---------------------------------------------------------
+>>>>>>> 26b71c0fc852f03daea7787c66fea84765c85129
             if ($this.attr("type") !== undefined && $this.attr("type").toLowerCase() === "email") {
               message = "Not a valid email address<!-- data-validator-validemail-message to override -->";
               if ($this.data("validationValidemailMessage")) {
@@ -934,9 +938,12 @@
     $(":input").not("[type=image],[type=submit]").jqBootstrapValidation.apply(this, arguments);
   };
 
+<<<<<<< HEAD
     
        
     
     
     
+=======
+>>>>>>> 26b71c0fc852f03daea7787c66fea84765c85129
 })(jQuery);
