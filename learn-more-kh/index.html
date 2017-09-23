@@ -26,11 +26,12 @@
   <body id="page-top">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-      <div class="container">
-
+    <nav class="navbar fixed-top" id="mainNav" style="overflow-x: hidden;">
           <!--Side bar-->
-        <div id="mySidenav" class="sidenav">
+        <div class="container text-left">
+            <div class="col-md-3" style="display: flex;">
+                 <span style="font-size:30px; color: white; cursor:pointer;" onclick="openNav()">&#9776;</span>
+                     <div id="mySidenav" class="sidenav">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
              <div class="sidebar-div"><a href="#">Home</a></div>
             <div class="sidebar-div"><a href="#">New! Free credit score</a></div>
@@ -67,26 +68,11 @@
             <div class="sidebar-others"><a href="#">SAFE Act: Chase Mortgage Loan Originators</a></div>
             <div class="sidebar-others"><a href="#">Fair Lending</a></div>
           </div>
-          
-          <div class="container"> <a href="#page-top">
-            <div class="row">
-                 <div class="col-md-1">
-                 <span style="font-size:30px; color: white; cursor:pointer;" onclick="openNav()">&#9776;</span>
-                </div>
-                
-                 <div class="col-md-4" style="display: flex;">
-              
-                <div style="width: auto; overflow:hidden;" id="header-logo">
-                <img src="img/logos/mk-logo.png" class="img-responsive"> 
-                </div>
-                      <div style="padding-top: 8px;" id="mklogo">
-                <img src="img/logos/mk-logo-2.png" class="img-responsive">
-                </div>
-                </div>
-               
-            </div>   </a>
+                <img src="img/logos/mk-logo.png" id="mk-logo"> 
+                <img src="img/logos/mk-logo-2.png" style="align-self: center;">
+   </div>
         </div>
-      </div>
+   
     </nav>
 
 <section>
@@ -101,12 +87,12 @@
            <h2>Chase Freedom Unlimited® credit card</h2>
             
             <div class="row">
-            <div class="col-md-6 text-center">
+            <div class="col-6 col-md-6 text-center">
             <img src="img/freedom_unlimited_card.png" width="100%">
             <br><i class ="fa fa-star"></i><i class ="fa fa-star"></i><i class ="fa fa-star"></i><i class ="fa fa-star"></i><i class ="fa fa-star-half-empty"></i>
             <br><a href="">(8,629 reviews)</a>
             </div>
-            <div class="col-md-6 offer-details">
+            <div class="col-6 col-md-6 offer-details">
             <button type="button" class="btn-success"><i class="fa fa-lock"></i>&nbsp; Apply Now</button><br>
                 
             <a id="OfferDetails" data-pt-name="cc_freedom_ulim_pp_od" href="javascript:;" data-remote="false" data-toggle="modal" data-target="#largeModal">*Offer Details</a><span class="sr-only"> Opens overlay</span>
@@ -311,48 +297,49 @@
             <div id="ProductInfo" class="benefits-list">
                 
                     <h2>Card Benefits</h2>
-                    <div class="row benefits">
-                        <div class="col-md-2">
+                    <div class="row">
+                        <div class="col-3 col-md-2 clearfix">
                         <div class="fa fa-calendar fa-3x benefits-icons"></div>
                         </div>
-                        <div class="col-md-10"><h3>No annual fee</h3>
+                        <div class="col-9 col-md-10 clearfix"><h3>No annual fee</h3>
                             <p>You won't have to pay an annual fee<sup>†</sup> for all the great features that come with your Freedom Unlimited® card.</p></div>
                     </div>
                     <div class="row benefits">
-                     <div class="col-md-2">
+                     <div class="col-3 col-md-2">
                         <div class="fa fa-gift fa-3x benefits-icons"></div>
                         </div>
-                        <div class="col-md-10"><h4>$150 Bonus</h4><p>after you spend $500 on purchases in your first 3 months from account opening.*</p><p>
+                        <div class="col-9 col-md-10"><h4>$150 Bonus</h4><p>after you spend $500 on purchases in your first 3 months from account opening.*</p><p>
 
                         Earn a $25 bonus after you add your first authorized user and make your first purchase within this same 3-month period.*</p><p>
 
                         This product is available to you if you do not have this card and have not received a new cardmember bonus for this card in the past 24 months.</p></div>
                 </div>
-                 <div class="row benefits"><div class="col-md-2">
+                 <div class="row benefits"><div class="col-3 col-md-2">
                         <div class="fa fa-percent fa-3x benefits-icons"></div>
                         </div>
-                        <div class="col-md-10"><h4>Low intro APR</h4><p>0% intro APR for 15 months from account opening on purchases and balance transfers.<sup>†</sup> After that, 15.99%–24.74% variable APR.<sup>†</sup> Balance transfer fee is 5% of the amount transferred with a minimum of $5.<sup>†</sup>
+                        <div class="col-9 col-md-10"><h4>Low intro APR</h4><p>0% intro APR for 15 months from account opening on purchases and balance transfers.<sup>†</sup> After that, 15.99%–24.74% variable APR.<sup>†</sup> Balance transfer fee is 5% of the amount transferred with a minimum of $5.<sup>†</sup>
                         </p></div>
                 </div>
-                 <div class="row benefits"><div class="col-md-2">
-                        <div class="fa fa-number-1-5 fa-23x benefits-icons"></div>
+                 <div class="row benefits"><div class="col-3 col-md-2">
+                        <div class="fa fa-number-1-5 fa-23x benefits-icons-15"></div>
                         </div>
-                        <div class="col-md-10"><h4>Earn unlimited 1.5% cash back</h4><p>Earn unlimited 1.5% cash back on every purchase* – it's automatic.
+                        <div class="col-9 col-md-10"><h4>Earn unlimited 1.5% cash back</h4><p>Earn unlimited 1.5% cash back on every purchase* – it's automatic.
                     </p></div>
                 </div>
-                 <div class="row benefits"><div class="col-md-2">
+                 <div class="row benefits"><div class="col-3 col-md-2">
                         <div class="fa fa-dollar fa-3x benefits-icons"></div>
                         </div>
-                        <div class="col-md-10"><h4>Cash Back rewards do not expire</h4><p>Cash Back rewards do not expire as long as your account is open.* And there is no minimum to redeem for cash back.
+                        <div class="col-9 col-md-10"><h4>Cash Back rewards do not expire</h4><p>Cash Back rewards do not expire as long as your account is open.* And there is no minimum to redeem for cash back.
                         </p></div>
                 </div>
                 <p></p><p></p>
                 <h2>Explore Additional Benefits</h2>
                 <div class="row add-benefits">
-                    <div class="col-md-6">
+                    <div class="col-md-6 benefits-item">
                     <a id="Reynolds_36000" data-toggle="modal" data-target="#benefitsModal" data-remote="false" href="javascript:;" class="link-arrow additional-item-title icon-cash-back-alt" data-pt-name="cc_freedom_ulim_cashbackr" data-overlay-id="redeem"><i class="fa fa-cashback"></i>Redeem Cash Back Rewards</a>
                     </div>
-                    <div class="col-md-6">
+                    
+                    <div class="col-md-6 benefits-item">
                     <a id="Reynolds_36000" data-toggle="modal" data-target="#benefitsModal" data-remote="false" href="javascript:;" class="link-arrow additional-item-title icon-cash-back-alt" data-pt-name="cc_freedom_ulim_cashbackr" data-overlay-id="redeem"><i class="fa fa-service-protection"></i>Service & protection</a>
                     </div>
                 </div>
@@ -443,11 +430,8 @@
                                 </div>
                             </div>
                         </div>
-                   
-                   </div>
-                         
+                   </div>  
                 <hr>
-                   
                   
                    <div class="text-center">
                    <button type="button" class="btn-primary">See All Reviews</button>
@@ -459,69 +443,68 @@
 
 </section>
       <div class="container-fluid" style="background-color: #353C44;">
-<div class="container" style="background-color: #353C44;">
+<div class="container" style="background-color: #353C44; height: auto;">
  
   <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
 
-
-<ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-    </ol>
-
     <div class="carousel-inner">
 
-      <div class="item active" style="height: 230px;">
+      <div class="item active">
         <h2>Browse credit cards by category</h2>
       <div class="row carousel-icons text-center">
           
-        <div class="col-md-2">
+        <div class="col-6 col-md-2 clearfix">
             <a class="icons-link" href=""><span class="fa fa-credit-card"></span><br>Featured</a>
         </div>
-        <div class="col-md-2">
+        <div class="col-6 col-md-2 clearfix">
         <a class="icons-link" href=""><span class="fa fa-credit-card-alt"></span><br>All Cards</a>
         </div>
-        <div class="col-md-2">
+        <div class="col-6 col-md-2 clearfix">
         <a class="icons-link" href=""><span class="fa fa-money"></span><br>Cash back</a>
         </div>
-        <div class="col-md-2">
+        <div class="col-6 col-md-2 clearfix">
         <a class="icons-link" href=""><span class="fa fa-arrow-circle-o-right"></span><br>Balance Transfer</a>
         </div>
-        <div class="col-md-2">
+        <div class="col-6 col-md-2 clearfix">
         <a class="icons-link" href=""><span class="fa fa-plane"></span><br>Travel</a>
         </div>
-        <div class="col-md-2">
+        <div class="col-6 col-md-2 clearfix">
         <a class="icons-link" href=""><span class="fa fa-suitcase"></span><br>Small Business</a>
         </div>
         </div>
       </div>
 
-      <div class="item" style="height: 230px;">
+      <div class="item">
           <h2>Browse credit cards by category</h2>
       <div class="row carousel-icons text-center">
           
-        <div class="col-md-2">
+        <div class="col-6 col-md-1 clearfix">
         <a class="icons-link" href=""><span class="fa fa-trophy"></span><br>Rewards</a>
         </div>
-        <div class="col-md-2">
+        <div class="col-6 col-md-2 clearfix">
         <a class="icons-link" href=""><span class="fa fa-calendar"></span><br>No Annual Fee</a>
         </div>
-        <div class="col-md-2">
+        <div class="col-6 col-md-3 clearfix">
         <a class="icons-link" href=""><span class="fa fa-globe"></span><br>No Foreign Transaction Fees</a>
         </div>
-        <div class="col-md-2">
+        <div class="col-6 col-md-2 clearfix">
         <a class="icons-link" href=""><span class="fa fa-tag"></span><br>0$ Intro APR</a>
         </div>
-        <div class="col-md-2">
+        <div class="col-6 col-md-2 clearfix">
         <a class="icons-link" href=""><span class="fa fa-cc-visa"></span><br>Visa</a>
         </div>
-        <div class="col-md-2">
+        <div class="col-6 col-md-2 clearfix">
         <a class="icons-link" href=""><span class="fa fa-cc-mastercard"></span><br>MasterCard</a>
         </div>
         </div>
       </div>
-    
+   
     </div>
+      
+       <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+    </ol>
 
     <a class="left carousel-control" href="#myCarousel" data-slide="prev">
       <span class="fa fa-chevron-left"></span>
@@ -539,10 +522,10 @@
         <div class="container-fluid" id="footer">
             <div class="container">
             <div class="row" id="footer-social-media">
-                <div class="col-md-3 text-left">
+                <div class="col-12 col-md-3 text-left">
                     <img src="img/logos/mk-logo-black.png" class="img-responsive">                <img src="img/logos/mk-logo-2-black.PNG" width="30px" class="img-responsive">
                 </div>
-                <div class="col-md-6 text-center"><ul class="list-inline social-buttons">
+                <div class="col-12 col-md-6 text-center"><ul class="list-inline social-buttons">
                 <li class="list-inline-item">
                 Follow us: 
                 </li>
@@ -629,13 +612,13 @@
         </div>
     </div> 
     <div class="container-fluid" id="footer-copyrights-links">
-        <div class="container">
+        <div class="container" id="footer-copyrights-links-container">
             <div class="row">
-                <div class="col-md-7 text-left"><p>
+                <div class="col-md-7 copyright"><p>
                     ©&nbsp;2017 JPMorgan Chase &amp; Co.<br>
                     Member FDIC <img id="IconEqualHousingLender" alt="Equal Housing Lender" src="https://creditcards.chase.com/R-Marketplace/1110008/images/equal_housing_lender.svg" style="height:14px;width:19px;"> Equal Housing Lender
                 </p></div>
-                <div class="col-md-5 text-right"> <ul>
+                <div class="col-md-5 links"> <ul>
                       <li>
                <a href="https://www.careersatchase.com/">Careers</a>
             </li>
@@ -676,7 +659,7 @@
       <!-- Bootstrap and necessary plugins -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/popper.js/index.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+   
     <script src="bower_components/pace/pace.min.js"></script>
 
     <!-- Bootstrap core JavaScript -->

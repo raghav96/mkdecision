@@ -105,6 +105,7 @@ var Modal = function ($) {
     Modal.prototype.show = function show(relatedTarget) {
       var _this = this;
 
+        
       if (this._isTransitioning) {
         return;
       }
@@ -129,6 +130,8 @@ var Modal = function ($) {
       this._setScrollbar();
 
       $(document.body).addClass(ClassName.OPEN);
+      
+
 
       this._setEscapeEvent();
       this._setResizeEvent();

@@ -7,6 +7,10 @@ body {
   overflow-x: hidden;
   font-family: "Open Sans",sans-serif; }
 
+.fixedPosition {
+    position: fixed;
+}
+
 section {
   padding: 60px 0px 0px 0px; }
  
@@ -14,19 +18,9 @@ section {
 .card-header-img {
    display: none;
     }
-/*
-@media (min-width: 768px) {
-    #mainNav {
-    padding-top: 25px;
-    padding-bottom: 25px;
-    border: none;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    background: #353C44; }
-}*/
-
 
 @media (min-width: 992px) {
+
   .card-header-img {
     display: block;
     top: 0;
@@ -36,15 +30,167 @@ section {
     }
 }
 
+#mainNav {
+    border: none;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 100%;
+    background: #353C44; }
+
+#mk-logo {
+    padding-left: 30%;
+}
+
+.benefits {
+ padding: 20px 0px;
+    }
+    
+.benefits-list{
+    padding-left: 10px;
+    
+}
+
+#footer-copyrights-links {
+        background-color: #FFF;
+      
+    }
+
+#footer-copyrights-links-container row{
+      font-size: .7em;
+        padding: 0px 0px !important;
+}
+    
+    #footer-copyrights-links ul {
+        list-style-type: none;
+        padding: none;
+        display: inline; 
+    }
+
+    #footer-copyrights-links li {
+        display: inline;
+        float: center;
+    }
+    
+    #footer-copyrights-links a {
+        color: grey;
+         font-size: 1em;
+         text-decoration: none;
+        padding: 0px 10px;
+    }
+
+ #footer-copyrights-links .copyright, #footer-copyrights-links .links {
+    text-align: center;
+}
+
+ #footer-social-media {
+        padding: 5px 0px;
+    }
+
+ .reviews {
+        padding: 10px;
+        margin: 0;
+        background-color: #ededed;
+    }
+
+.benefits-item {
+    border-bottom: 1px solid #eee;
+    padding: 1em 1em;
+}
+
+.carousel-inner span {
+    color: #A2D0FF; 
+    font-size: 2.2em;
+    padding-top: .7em;
+    padding-bottom: .5em;
+}
+
 @media (min-width: 768px) {
+    
+    .carousel-inner span {
+    color: #A2D0FF; 
+    font-size: 2.2em;
+    padding-bottom: 10px;
+}
+    
+  .benefits-item {
+    border-bottom: none;
+}
+    
   #mainNav {
     padding-top: 25px;
     padding-bottom: 25px;
     border: none;
     padding-top: 8px;
     padding-bottom: 8px;
-    background: #353C44; }
+    background: #353C44;
+     width: 100%;}
     
+    #mk-logo{
+    padding-left: 20px;
+    }
+    
+    .benefits {
+ padding: 20px 0px;
+    }
+    
+.benefits-list{
+    padding-left: 60px;
+  
+    
+}
+
+   #footer-copyrights-links {
+        background-color: #FFF;
+      
+    }
+
+#footer-copyrights-links-container{
+      font-size: .7em;
+        padding: 20px 0px;
+}
+    
+    #footer-copyrights-links ul {
+        list-style-type: none;
+        padding: none;
+        display: inline; 
+    }
+
+    #footer-copyrights-links li {
+        
+        display: inline;
+        float: right;
+    }
+    
+    #footer-copyrights-links a {
+        color: grey;
+         font-size: 1em;
+         text-decoration: none;
+        padding: 0px 10px;
+    }
+    
+    #footer-copyrights-links .copyright {
+    text-align: left;
+}
+
+#footer-copyrights-links .links {
+    text-align: right;
+}
+    
+     #footer-social-media {
+        padding: 20px 0px;
+    }
+    
+     .reviews {
+        padding: 0px 40px 20px 60px;
+        margin: 0;
+        background-color: #ededed;
+    }
+    
+}
+
+
+/* Side nav CSS for all media sizes */
+
 .sidenav {
     height: 100%;
     width: 0;
@@ -109,7 +255,7 @@ section {
     color: white;
     font-size: 10px;
 }
-}
+
     .breadcrumbs {
         padding-top: 15px;
         font-size: .9em;
@@ -126,16 +272,9 @@ section {
     border-left: 1px solid #e6e6e6;
     padding: 0px;
     margin: 0px;
+    width: 100%;
 }
     
-    .benefits {
-        padding: 20px 0px;
-    }
-    
-.benefits-list{
-    padding-left: 60px;
-    
-}
 
     .benefits-list p{
     color: grey;
@@ -184,6 +323,19 @@ section {
         font-weight: 400;
       
     }
+
+    .benefits-icons-15 {
+        background:#ededed;
+        color: #0a4386;
+        padding: 20px;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        text-align: center;
+        font-weight: 400;
+      
+    }
+
     
     .card-feature {
     }
@@ -350,17 +502,14 @@ section {
     #footer-links h6 {
        font-size: 
     }
-    
-    #footer-social-media {
-        padding: 20px 0px;
-    }
+
     
     ul.social-buttons {
         margin-bottom: 0; }
     ul.social-buttons li a {
-    font-size: 1.7em;
+    padding: 0rem .5rem;
+    font-size: 1.6em;
     line-height: 40px;
-    display: block;
     width: 40px;
     height: 40px;
     -webkit-transition: all 0.3s;
@@ -373,38 +522,10 @@ section {
     ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
       color: darkslategrey; }
     
-    #footer-copyrights-links {
-        background-color: #FFF;
-        font-size: .7em;
-        padding: 20px 0px;
-    }
     
-    #footer-copyrights-links ul {
-        list-style-type: none;
-        padding: none;
-        display: inline; 
-    }
-
-    #footer-copyrights-links li {
-        
-        display: inline;
-        float: right;
-    }
-    
-    #footer-copyrights-links a {
-        color: grey;
-         font-size: 1em;
-         text-decoration: none;
-        padding: 0px 10px;
-    }
     
     .carousel-icons {
         padding: 25px 50px;
     }
     
-    .reviews {
-        padding: 0px 40px 20px 60px;
-        margin: 0;
-        background-color: #ededed;
-    }
-    
+   

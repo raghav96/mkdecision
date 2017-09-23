@@ -3252,6 +3252,7 @@ tbody.collapse.show {
   -ms-flex-pack: justify;
       justify-content: space-between;
   padding: 0.5rem 1rem;
+   overflow-x: hidden;
 }
 
 .navbar > .container,
@@ -5055,6 +5056,7 @@ padding: 0rem 2rem 2rem 2rem;
 
 .carousel {
   position: relative;
+    height: auto;
 }
 
 .carousel-inner {
@@ -8250,16 +8252,12 @@ a.text-dark:focus, a.text-dark:hover {
   text-decoration: none;
 }
 
-.carousel-inner span {
-    color: #A2D0FF; 
-    font-size: 2.2em;
-    padding-bottom: 10px;
-}
+
 
 .icons-link:hover>span {
     color: #fff
 }
-.carousel-inner > .item {
+.carousel-inner > .item  {
   position: relative;
   display: none;
   -webkit-transition: .6s ease-in-out left;
@@ -8394,8 +8392,8 @@ a.text-dark:focus, a.text-dark:hover {
   content: '\203a';
 }
 .carousel-indicators {
-  position: absolute;
-  bottom: 10px;
+  position: relative;
+
   left: 50%;
   z-index: 15;
   width: 60%;
@@ -8458,8 +8456,6 @@ a.text-dark:focus, a.text-dark:hover {
     left: 20%;
     padding-bottom: 30px;
   }
-  .carousel-indicators {
-    bottom: 20px;
-  }
+
 }
 /*# sourceMappingURL=bootstrap.css.map */
