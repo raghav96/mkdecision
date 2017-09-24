@@ -1,20 +1,15 @@
 @font-face { 
 font-family: "Open Sans";
-src: url(fonts/Open_Sans/OpenSans-Light.ttf);
+src: url(../fonts/Open_Sans/OpenSans-Light.ttf);
 }
 
 body {
   overflow-x: hidden;
-  font-family: "Open Sans",sans-serif; }
-
-.fixedPosition {
-    position: fixed;
-}
+  font-family: "Open Sans", sans-serif; }
 
 section {
   padding: 60px 0px 0px 0px; }
  
-
 .card-header-img {
    display: none;
     }

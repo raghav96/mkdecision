@@ -23,7 +23,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+.icon-loading:before {
+  content: "\e97a";
+  font-size: 150%;
+}
 .icon-home2:before {
   content: "\e901";
   font-size: 150%;
