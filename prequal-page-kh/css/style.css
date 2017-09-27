@@ -1,0 +1,58 @@
+.center-image {
+	text-align: center;
+
+}
+
+span.nav-left {
+	font-size: 30px; 
+	color: white; 
+	cursor: pointer;
+}
+
+#mklogo {
+  transform: translateX(-50%);
+  left: 40%;
+  position: absolute;
+  height: 50px;
+  padding-top: 6px;
+}
+
+.sidenav-button {
+	width:20%;
+}
+
+.sidenav-brand {
+	width:80%;
+}
+
+section {
+	padding: 70px 0;
+}
+
+h2.service-heading {
+	font-weight: 600;
+	padding-left: 40px;
+}
+
+
+#get-started {
+	padding-top: 15px;
+	padding-bottom: 5px;
+}
+
+#prequal-div {
+	border-right: #b5b5b5 1px solid;
+	opacity: 50%
+}
+
+.pad-down {
+	padding-top: 5px;
+}
+
+.field-icon {
+  float: right;
+  margin-left: -25px;
+  margin-top: -30px;
+  position: relative;
+  z-index: 2;
+}
