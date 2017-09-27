@@ -1,275 +1,303 @@
 @font-face { 
 font-family: "Open Sans";
+src: url(../fonts/Open_Sans/OpenSans-Regular.ttf);
+}
+
+@font-face { 
+font-family: "Open Sans Light";
 src: url(../fonts/Open_Sans/OpenSans-Light.ttf);
 }
+
 
 body {
   overflow-x: hidden;
   font-family: "Open Sans", sans-serif; }
 
-section {
-  padding: 60px 0px 0px 0px; }
- 
-.card-header-img {
-   display: none;
+
+/* Overlay the body when the side menu is opened */
+.overlay {
+  opacity:0.7;
+    filter: alpha(opacity=20);
+    background-color:#000; 
+    width:100%; 
+    height:100%; 
+    z-index:2;
+    top:0; 
+    left:0; 
+    position:fixed; 
+}
+
+/*-------------------------------------------------------------------------------------------------
+    General styling for all media sizes
+--------------------------------------------------------------------------------------------------*/
+    .container {
+        max-width: 1260px;
     }
 
-@media (min-width: 992px) {
+    /* Styling for header */
+    header {
+        position: fixed;
+        z-index: 1;
+        max-height: 70px;
+        width: 100%;
+        -moz-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        -webkit-transition: all .3s ease;
+        transition: all .3s ease;
+    }
 
-  .card-header-img {
+    .product-page {
+        background: #353c44;
+        color: #fff;
+        font-size: 1.5em;
+    }
+
+    .sign-in {
+        padding-top: .5em;
+    }
+
+    .product-page .btn-primary
+    {
+        color: white;
+        background: #0b6efd;
+        border: 1px solid white;
+        font-size: .5em;
+        padding: .5em 1em;
+    }
+
+    .product-page .btn-primary:hover
+    {
+        border: 1px solid white;
+    }
+
+    /* Styling for main menu */
+     #mainNav {
+            border: none;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            width: 100%;
+            background: #353C44; }
+    
+    /* Side menu */
+
+    /*
+    #mySidenav ul
+    {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    }
+
+    #mySidenav a
+    {
     display: block;
-    top: 0;
-    left: 0;
-    background-image:url("img/freedom_unlimited_logo_ext.jpg"); background-repeat: repeat;
-    width: 400%;
-    }
-}
-
-#mainNav {
-    border: none;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    width: 100%;
-    background: #353C44; }
-
-#mk-logo {
-    padding-left: 30%;
-}
-
-.benefits {
- padding: 20px 0px;
-    }
-    
-.benefits-list{
-    padding-left: 10px;
-    
-}
-
-#footer-copyrights-links {
-        background-color: #FFF;
-      
-    }
-
-#footer-copyrights-links-container row{
-      font-size: .7em;
-        padding: 0px 0px !important;
-}
-    
-    #footer-copyrights-links ul {
-        list-style-type: none;
-        padding: none;
-        display: inline; 
-    }
-
-    #footer-copyrights-links li {
-        display: inline;
-        float: center;
-    }
-    
-    #footer-copyrights-links a {
-        color: grey;
-         font-size: 1em;
-         text-decoration: none;
-        padding: 0px 10px;
-    }
-
- #footer-copyrights-links .copyright, #footer-copyrights-links .links {
-    text-align: center;
-}
-
- #footer-social-media {
-        padding: 5px 0px;
-    }
-
- .reviews {
-        padding: 10px;
-        margin: 0;
-        background-color: #ededed;
-    }
-
-.benefits-item {
-    border-bottom: 1px solid #eee;
-    padding: 1em 1em;
-}
-
-.carousel-inner span {
-    color: #A2D0FF; 
-    font-size: 2.2em;
-    padding-top: .7em;
-    padding-bottom: .5em;
-}
-
-@media (min-width: 768px) {
-    
-    .carousel-inner span {
-    color: #A2D0FF; 
-    font-size: 2.2em;
-    padding-bottom: 10px;
-}
-    
-  .benefits-item {
-    border-bottom: none;
-}
-    
-  #mainNav {
-    padding-top: 25px;
-    padding-bottom: 25px;
-    border: none;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    background: #353C44;
-     width: 100%;}
-    
-    #mk-logo{
-    padding-left: 20px;
-    }
-    
-    .benefits {
- padding: 20px 0px;
-    }
-    
-.benefits-list{
-    padding-left: 60px;
-  
-    
-}
-
-   #footer-copyrights-links {
-        background-color: #FFF;
-      
-    }
-
-#footer-copyrights-links-container{
-      font-size: .7em;
-        padding: 20px 0px;
-}
-    
-    #footer-copyrights-links ul {
-        list-style-type: none;
-        padding: none;
-        display: inline; 
-    }
-
-    #footer-copyrights-links li {
-        
-        display: inline;
-        float: right;
-    }
-    
-    #footer-copyrights-links a {
-        color: grey;
-         font-size: 1em;
-         text-decoration: none;
-        padding: 0px 10px;
-    }
-    
-    #footer-copyrights-links .copyright {
-    text-align: left;
-}
-
-#footer-copyrights-links .links {
-    text-align: right;
-}
-    
-     #footer-social-media {
-        padding: 20px 0px;
-    }
-    
-     .reviews {
-        padding: 0px 40px 20px 60px;
-        margin: 0;
-        background-color: #ededed;
-    }
-    
-}
-
-
-/* Side nav CSS for all media sizes */
-
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    padding-top: 80px;
-    opacity: 1;
-}
-
-.sidenav a {
-    padding: 8px 8px 8px 20px;
+    color: #FFF;
+    background-color: #036;
+    width: 9em;
+    padding: 3px 12px 3px 8px;
     text-decoration: none;
-    font-size: 14px;
-    color: white;
-    display: block;
-    transition-duration: 3s;
-}
-
- 
-.sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 5px;
-    font-size: 36px;
-    margin-left: 50px;
-}
-
-.sidebar-title {
-    background: #111;
-    color: white;
-    text-transform: uppercase;
-    font-size: 10px;
-    padding: 6px 6px 6px 8px;
-}
-.sidebar-div {
-    background: #4d4d4d; 
-    border: 1px solid #111;
-}
-
-.sidebar-div a {
-    position: relative;
-}
-
-.sidebar-div:hover {
-    background: #8c8c8c; 
-    border: 1px solid #111;
-}
-
-.sidebar-others {
-    background: #111;
-    color: white;
-    padding-left: 8px;
-}
-
-
-.sidebar-others a {
-    background: #111;
-    color: white;
-    font-size: 10px;
-}
-
-    .breadcrumbs {
-        padding-top: 15px;
-        font-size: .9em;
+    border-bottom: 1px solid #fff;
+    font-weight: bold;
     }
-    
+
+    #mySidenav a:hover
+    {
+    background-color: #369;
+    color: #FFF;
+    }
+
+    #mySidenav li li a
+    {
+    display: block;
+    color: #FFF;
+    background-color: #69C;
+    width: 9em;
+    padding: 3px 3px 3px 17px;
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+    font-weight: normal;
+    }*/
+
+    /* Side nav styling */
+
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        padding-top: 80px;
+        opacity: 1;
+    }
+
+    .sidenav a {
+        padding: 8px 8px 8px 20px;
+        text-decoration: none;
+        font-size: 14px;
+        color: white;
+        display: block;
+        transition-duration: 3s;
+    }
+
+
+    .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 5px;
+        font-size: 36px;
+        margin-left: 50px;
+    }
+
+    .sidebar-title {
+        background: #111;
+        color: white;
+        text-transform: uppercase;
+        font-size: 10px;
+        padding: 6px 6px 6px 8px;
+    }
+    .sidebar-div {
+        background: #4d4d4d; 
+        border: 1px solid #111;
+    }
+
+    .sidebar-div a {
+        position: relative;
+    }
+
+    .sidebar-div:hover {
+        background: #8c8c8c; 
+        border: 1px solid #111;
+    }
+
+    .sidebar-others {
+        background: #111;
+        color: white;
+        padding-left: 8px;
+    }
+
+    .sidebar-others a {
+        background: #111;
+        color: white;
+        font-size: 10px;
+    }
+
+    /* Collapsible menu styling */
+    .collapse {
+      display: none;
+    }
+    .collapse.in {
+      display: block;
+    }
+    tr.collapse.in {
+      display: table-row;
+    }
+    tbody.collapse.in {
+      display: table-row-group;
+    }
+
+    .collapse-div {
+        list-style: none;
+        background: #595653;
+        color: white;
+        padding: .1em .2em .1em 1.8em;
+        border: 1px solid #3D3734;
+    }
+
+    .collapse-div li {
+        list-style: none;
+        font-size: .9em;
+        padding: .2em 0 .4em 0;
+    }
+
+    section {
+        padding: 60px 0px 0px 0px; 
+    }
+
+    /* Feature card image */
+    .card-header-img {
+       display: none;
+    }
+
+    /* Card info on left side */
+     .breadcrumbs {
+        padding-top: 15px;
+        font-size: .9em; 
+    }
+
+    .display-none {
+        display: none;
+    } 
+
+    .scroll-test {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: white;
+        width: 100%;
+        padding: 1em 0em 0em 0em;
+        border-bottom: 4px solid #ccc;
+        z-index: 50;
+    } 
+
+    .scroll-test .fa, .scroll-test h2, .scroll-test img, .scroll-test #reviews-link, .scroll-test .text-left  {
+        display: none;
+    }
+
+    .card-feature {
+        padding: 0rem .5rem;
+    }
     .card-feature a {
          text-decoration: none;
          font-size: .9em;
+    }
 
+    .card-info {
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+    }
+
+    .card-feature p {
+        font-size: .8em;
     }
     
+    .card-feature h2 {
+        font-family: "Open Sans Light";
+        font-size: 1.5em;
+        line-height: 1.5em;
+        font-weight: 400;
+        padding-bottom: 5px;
+    }
+
+    .offer-details a {
+        text-decoration: none;
+        font-size: .8em;
+    }
     
-.card-info {
-    border-left: 1px solid #e6e6e6;
-    padding: 0px;
-    margin: 0px;
-    width: 100%;
-}
-    
+    .at-a-glance {
+        padding: 2rem 1rem 2rem 0rem;
+        font-size: .8em;
+    }
+
+
+    /* Card info on right side */
+    .benefits-list {
+    padding: 0 .5rem;
+    }
+
+    .benefits span {
+        font-size: 1em;
+        color: #0a4386;
+        font-weight: 600; 
+    }
+
+    .benefits-item {
+        border-bottom: 1px solid #eee;
+        padding: 1em 1em;
+    }
 
     .benefits-list p{
     color: grey;
@@ -307,56 +335,579 @@ section {
         margin-bottom: 0em;
     }
     
+    .benefits-icons-15:before {
+        font-family: "Open Sans";
+        font-weight: 600;
+        content: "1.5";
+        font-size: .9em;
+        font-style: normal;
+    }
+
+    .benefits {
+        padding: 1em 0em;
+    }
+
     .benefits-icons {
+        width: 5em;
+        height: 5em;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
         background:#ededed;
         color: #0a4386;
-        padding: 15px;
-        border-radius: 50%;
-        width: 80px;
-        height: 80px;
-        text-align: center;
-        font-weight: 400;
-      
+        position: relative;
+    }
+    .fa-icon {
+       position: absolute;
+       font-size: 3em;
+       top: 50%;
+       left: 50%;
+       transform: translate(-50%, -50%);
     }
 
-    .benefits-icons-15 {
-        background:#ededed;
-        color: #0a4386;
-        padding: 20px;
-        border-radius: 50%;
-        width: 80px;
-        height: 80px;
-        text-align: center;
-        font-weight: 400;
-      
-    }
-
-    
-    .card-feature {
+    /* Additional benefits on right side */
+    .add-benefits {
+            padding: 20px 0px 50px 0px;
     }
     
-    .card-feature p {
-        font-size: .8em;
-    }
-    
-    .card-feature h2 {
-        font-size: 1.2em;
-        line-height: 2em;
-        font-weight: 400;
-        padding-bottom: 5px;
-    }
-
-    
-    .offer-details a {
+    .add-benefits a {
         text-decoration: none;
+        color: #000;
+        font-weight: 700;
+        font-size: .8em;
+        font-family: "Open Sans", sans-serif;
+    }
+    
+    .add-benefits a:hover {
+        text-decoration: none;
+        color: #126bc5;
+        font-weight: 700;
         font-size: .8em;
     }
     
-    .at-a-glance {
-        padding: 20px 0px;
-        font-size: .8em;
+     .add-benefits a i {
+        text-decoration: none;
+        font-size: 2em;
+        color: #126bc5;
+    }
+
+    /* Invite section on right side */
+    .invite {
+        background: linear-gradient(to bottom,#dceaf8 0%,#fff 80%);
+        border: 2px solid #0a4386;
+        padding: 30px 20px;
+        margin: 0;
     }
     
+    .invite h1 {
+        margin: 0px;
+        padding: 0px;
+        font-weight: 500;
+        font-family: "Open Sans Light";
+        font-size: 1.2em;
+    }
+    
+    .invite h2 {
+        margin: 0px;
+        padding: 10px 0px;
+        color: #0a4386;
+        font-size: 1.5em;
+        font-weight: 800;
+        border: none;
+    }
+    
+      .invite h4 {
+        margin: 0px;
+        color: #000;
+        font-size: .8em;
+        font-weight: 500;
+        border: none;
+    }
+    
+    .invite h6 {
+        margin: 0px;
+        padding: 10px 0px;
+        color: #000;
+        font-size: .6em;
+        font-weight: 500;
+        border: none;
+    }
+    
+    .invite-friends {
+        padding: 20px;
+    }
+
+
+    /* Reviews section on right side */
+    .reviews {
+        padding: 0 1rem;
+        margin: 0;
+        background-color: #ededed;
+    }
+
+    /* Modals */
+    .modal-content {
+        padding: 0;
+        margin: 0;
+        overflow: auto;
+    }
+
+    .modal-body {
+        padding: 0;
+        margin: 0;
+        overflow: auto;
+        height: 100%;
+    }
+
+    .modal-body a {
+        font-size: 1em;
+        text-decoration: underline;
+    }
+    
+        /* Offer details modal */
+
+            .offer-details {
+                padding: 0rem 4rem 4rem 4rem;
+            }
+
+            .offer-details h1{
+                color: #666;
+                font-size: 3em;
+                font-weight: 200;
+                padding: 3rem 0rem;
+            }
+
+        /* Redeem cash back rewards modal */
+            .benefits_slide-right-rail {
+                float: right;
+                padding: 0 2rem;
+                font-size: 1.2em;
+            }
+
+             .benefits_slide-right-rail strong {
+                font-size: 1.5em;
+            }
+
+            .benefits_slide-header {
+                float: left;
+            }
+
+            .benefits_slide-header-background {
+                color: #000;
+                background-image: url("../img/freedom_redeem_cash_lg.jpg");
+                width: 100%;
+                height: 600px;
+            }
+
+            .benefits_title {
+                font-size: 2.7em;
+                font-weight: 100;
+                font-family: "Open Sans Light";
+                line-height: 1.2em;
+                text-align: left;
+                padding: 3rem 4rem;
+                width: 75%;
+                color: #555;
+            }
+
+        /* Service & protection modal */
+
+            .serviceprotection {
+                background-image: url("../img/service_protection_lg.jpg");
+                background-size: 100% 100%;
+                color: #000;
+                font-size: 1.3em;
+                line-height: 2em;
+                height: 220px;
+                padding: 4rem 3rem 2rem 3rem;
+            }
+
+            .service-modal-padding {
+                padding: .5rem 0rem .3rem 3rem;
+                border-bottom: 1px solid #eee;
+            }
+
+            .serviceprotection span {
+                font-size: 2.2em;
+                font-family: "Open Sans Light";
+                font-weight: 100;
+                color: #666;
+            }
+
+            .benefits_slide-description-item, .disclaimer {
+            padding: 0rem 1rem;
+            }
+
+    /* Header styling for modals */
+    .modal-head
+    {
+        padding: .5rem 0rem .3rem 2rem;
+        border-bottom: 1px solid #eee;
+    }
+
+    .modal-header {
+        padding: 2rem 2rem 0rem 4rem;
+    }
+
+    .modal-content button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: #eee;
+        padding: 1rem;
+        font-size: 1em;
+        color: grey;
+        opacity: 1;
+        height: auto;
+    }
+
+    .modal-content button:hover {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: #eee;
+        padding: 1rem;
+        font-size: 1em;
+        opacity: 1;
+    }
+
+    .benefits_card-name {
+        display: inline-block;
+        float: left;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0;
+        line-height: 1;
+        margin-right: 25px;
+        padding: 10px 0;
+    }
+
+    /* Offer details & pricing terms styling for modal header */
+
+     #OfferDetails, #pricing-terms{
+            color: blue;
+            font-size: .7em;
+            font-weight: 300;
+            line-height: 1px !important;
+        }
+
+    .cta-buttons, .apply-wrap, .offer-wrap {
+        display: inline-block;
+        float: left;
+    }
+    .offer-wrap, .offer-wrap a {
+        font-weight: 100;
+        padding-left: .5rem;
+        line-height: 1em;
+        color: #126bc5;
+    }
+
+    .offer-wrap a:hover
+    {
+        color: darkblue;
+    }
+    
+    /* Styling for apply now button in modal header */
+
+    #modal-apply-now-button {
+     color: #fff;
+        background-color: #4dbd74;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 5px;
+        text-align: center;
+        text-decoration: none;
+        margin-bottom: 15px;
+    }
+
+    #modal-apply-now-button i {
+        color: white;
+        font-size: 1.2em;
+        padding-right: 1rem;
+    }
+
+    /* Carousel of credit card categories */
+    
+    .carousel-inner span {
+        color: #A2D0FF; 
+        font-size: 2.2em;
+        padding-top: .7em;
+        padding-bottom: .5em;
+    }
+
+     .carousel-icons {
+        padding: 2.5rem .5rem;
+    }
+
+
+    /* Styling for footer */
+    footer {
+        padding: 0;
+        background-color: #EDEDED;
+    }
+
+    #footer {
+        background-color: #EDEDED;
+    }
+    
+    #footer-container-links {
+        border-top: 2px solid #ccc;
+        background-color: #EDEDED;
+    }
+
+    footer .container {
+        padding: .5rem;
+    }
+
+    #footer-links {
+        padding: 40px 0px;
+        
+    }
+
+    #invis-container {
+        display: none;
+    }
+
+    #mobile-invis-container {
+        display: block;
+        background: #EDEDED;
+    }
+
+    #mobile-invis-container a {
+        font-size: 1.5em;
+        padding: 1em .3em;
+        color: grey;
+    }
+
+    #footer-links ul, #footer-copyrights-links ul, #mobile-invis-container ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    #mobile-invis-container li {
+        font-size: .6em;
+        padding-left: 1em;
+    }
+
+    #footer-copyrights-links a {
+        color: grey;
+         font-size: .8em;
+         text-decoration: none;
+        padding: 0em .5em;
+    }
+
+    #footer-copyrights-links .copyright, #footer-copyrights-links .links{
+    text-align: center;
+     color: grey;
+         font-size: .9em;
+         text-decoration: none;
+        line-height: 1.5em;
+    }
+#footer-copyrights-links-container {
+    padding: 1em .5em;
+}
+    #footer-copyrights-links li {
+     display: inline;
+    float: center;
+        padding: 0;
+    }
+    .credit-cards-ul {
+        columns: 2;
+    }
+    
+     #footer-links li a{
+        color: grey;
+         font-size: .8em;
+         text-decoration: none;
+    }
+    
+    #footer-links h6 {
+       font-size: 
+    }
+
+    ul.social-buttons {
+        margin-bottom: 0; }
+    ul.social-buttons li a {
+    padding: 0rem .5rem;
+    font-size: 1.6em;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    color: #717171;
+    outline: none;
+    background-color: #EDEDED; 
+    text-align: center;}
+    ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
+      color: darkslategrey; }
+    
+
+/*-------------------------------------------------------------------------------------------------
+    Styling for media min width 768px
+--------------------------------------------------------------------------------------------------*/
+
+    @media (min-width: 768px) {
+
+        #mainNav {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        border: none;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        background: #353C44;
+        width: 100%;
+        }
+        
+        .card-info {
+        border-left: 1px solid #eee;
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+        }
+
+    
+        .benefits-item {
+        border-bottom: none;
+        }
+
+        .benefits-list{
+        padding: 0 3rem;
+        }
+
+        .benefits span {
+            font-size: 1em;
+            color: #0a4386;
+            font-weight: 600; 
+        }
+
+        .reviews {
+            padding: 0 3rem;
+            margin: 0;
+            background-color: #ededed;
+        }
+        
+        .carousel-inner span {
+            color: #A2D0FF; 
+            font-size: 2.2em;
+            padding-bottom: 10px;
+        }
+
+         #footer {
+            background-color: #EDEDED;
+        }
+
+        #footer-container-links {
+            border-top: 2px solid #ccc;
+            background-color: #EDEDED;
+
+        }
+
+        footer {
+        padding: 0 2rem;
+        background-color: #EDEDED;
+
+        }
+
+        #footer-links {
+            padding: 40px 0px;
+
+        }
+
+         #invis-container {
+        display: block;
+        }
+        
+        #mobile-invis-container{
+            display: none;
+        }
+        
+        #footer-links ul {
+
+            list-style: none;
+            padding: 0;
+        }
+
+        .credit-cards-ul {
+            columns: 2;
+        }
+
+         #footer-links li a{
+            color: grey;
+             font-size: .8em;
+             text-decoration: none;
+        }
+
+         #footer-copyrights-links {
+               background-color: #FFF;
+                padding: 1em 2em;
+            }
+
+        #footer-copyrights-links-container{
+              font-size: .7em;
+        }
+
+        #footer-copyrights-links ul {
+            list-style-type: none;
+            padding: none;
+            display: inline; 
+        }
+
+        #footer-copyrights-links li {
+            display: inline;
+            float: center;
+
+        }
+
+        #footer-copyrights-links a {
+            color: grey;
+             font-size: 1em;
+             text-decoration: none;
+            padding: 0px 10px;
+        }
+
+        #footer-copyrights-links .copyright {
+            text-align: left;
+             color: grey;
+             font-size: 1em;
+             text-decoration: none;
+        }
+        #footer-copyrights-links .links {
+            text-align: right;
+             color: grey;
+             font-size: 1em;
+             text-decoration: none;
+        }
+
+
+
+    }
+
+/*-------------------------------------------------------------------------------------------------
+    Styling for media min width 992px
+--------------------------------------------------------------------------------------------------*/
+    @media (min-width: 992px) {
+
+        .product-page .btn-primary
+    {
+        color: white;
+        background: #0b6efd;
+        border: 1px solid white;
+        font-size: .6em;
+        padding: .5em 1em;
+
+    }
+        /* Create a repeating background for feature card image on large media sizes */
+      .card-header-img {
+        display: block;
+        top: 0;
+        left: 0;
+        background-image:url("../img/freedom_unlimited_logo_ext.jpg"); background-repeat: repeat;
+        width: 400%;
+        }
+    }
+
     .btn-success {
     color: #fff;
     background-color: #4dbd74;
@@ -365,7 +916,7 @@ section {
     border-radius: 5px;
     text-align: center;
     text-decoration: none;
-    margin-bottom: 15px}
+    margin-bottom: 15px;}
     
   .btn-success:hover {
     color: #fff;
@@ -398,129 +949,4 @@ section {
     background-color: #0b6efd;
      cursor:pointer;
      }
-
-    
-    
-    .add-benefits{
-        padding: 20px 0px 50px 0px;
-    }
-    
-    .add-benefits a {
-        text-decoration: none;
-        color: #000;
-        font-weight: 700;
-        font-size: .8em;
-    }
-    
-    .add-benefits a:hover {
-        text-decoration: none;
-        color: #126bc5;
-        font-weight: 700;
-        font-size: .8em;
-    }
-    
-     .add-benefits a i {
-        text-decoration: none;
-        font-size: 2em;
-        color: #126bc5;
-    }
-    
-    .invite {
-        background: linear-gradient(to bottom,#dceaf8 0%,#fff 80%);
-        border: 2px solid #0a4386;
-        padding: 30px 20px;
-        margin: 0;
-    }
-    
-    .invite h1 {
-        margin: 0px;
-        padding: 0px;
-        font-weight: 500;
-        font-size: 1.2em;
-    }
-    
-    .invite h2 {
-        margin: 0px;
-        padding: 10px 0px;
-        color: #0a4386;
-        font-size: 1em;
-        font-weight: 800;
-        border: none;
-    }
-    
-      .invite h4 {
-        margin: 0px;
-        color: #000;
-        font-size: .8em;
-        font-weight: 500;
-        border: none;
-    }
-    
-    .invite h6 {
-        margin: 0px;
-        padding: 10px 0px;
-        color: #000;
-        font-size: .6em;
-        font-weight: 500;
-        border: none;
-    }
-    
-    .invite-friends {
-        padding: 20px;
-    }
-    
-    #footer {
-        background-color: #EDEDED;
-    }
-    
-    #footer-container-links {
-        border-top: 2px solid #ccc;
-        background-color: #EDEDED;
-    }
-    
-    #footer-links {
-        padding: 40px 0px;
-        
-    }
-    
-    #footer-links ul {
-        list-style: none;
-        padding: 0;
-    }
-    
-     #footer-links li a{
-        color: grey;
-         font-size: .8em;
-         text-decoration: none;
-    }
-    
-    #footer-links h6 {
-       font-size: 
-    }
-
-    
-    ul.social-buttons {
-        margin-bottom: 0; }
-    ul.social-buttons li a {
-    padding: 0rem .5rem;
-    font-size: 1.6em;
-    line-height: 40px;
-    width: 40px;
-    height: 40px;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-    color: #717171;
-    outline: none;
-    background-color: #EDEDED; 
-    text-align: center;}
-    ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
-      color: darkslategrey; }
-    
-    
-    
-    .carousel-icons {
-        padding: 25px 50px;
-    }
-    
-   
+ 

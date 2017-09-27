@@ -597,43 +597,36 @@ pre code {
 }
 
 .container {
+  padding-left: 10px; 
+ padding-right: 10px;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px;
-  width: 100%;
+  max-width: 100%;
 }
 
 @media (min-width: 576px) {
   .container {
-    max-width: 540px;
+    max-width: 576px;
   }
 }
 
 @media (min-width: 768px) {
   .container {
-    max-width: 720px;
+    max-width: 768px;
   }
 }
 
 @media (min-width: 992px) {
   .container {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
+    max-width: 992px;
   }
 }
 
 .container-fluid {
-  width: 100%;
+    width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px;
+  
   width: 100%;
 }
 
@@ -643,6 +636,11 @@ pre code {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
  
+}
+
+.no-padding {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
 .no-gutters {
@@ -665,8 +663,7 @@ pre code {
   position: relative;
   width: 100%;
   min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
+
 }
 
 .clear-sides {
@@ -3700,7 +3697,7 @@ tbody.collapse.show {
 
 .card-title {
   font-size: 1.2em;
-  font-weight: 700;
+  font-weight: 500;
   padding-top: 0;
   margin-bottom: 0.75rem;
 }
@@ -4631,8 +4628,9 @@ button.close {
   left: 0;
   z-index: 1050;
   display: none;
-  overflow: hidden;
+  overflow: auto;
   outline: 0;
+  
 }
 
 .modal.fade .modal-dialog {
@@ -4696,7 +4694,7 @@ button.close {
       align-items: center;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  padding: 5px 0px 15px 15px;
+  padding: 0px 0px 15px 15px;
 }
 
 .modal-header button {
@@ -4716,11 +4714,12 @@ button.close {
 }
 
 .modal-body {
+    
   position: relative;
   -ms-flex: 1 1 auto;
       flex: 1 1 auto;
 padding: 0rem 2rem 2rem 2rem;
-
+width: 100%;
 }
 
 .modal-footer {
@@ -4752,7 +4751,7 @@ padding: 0rem 2rem 2rem 2rem;
 
 @media (min-width: 576px) {
   .modal-dialog {
-    max-width: 500px;
+    max-width: 550px;
     margin: 30px auto;
   }
   .modal-sm {
@@ -4762,8 +4761,15 @@ padding: 0rem 2rem 2rem 2rem;
 
 @media (min-width: 992px) {
   .modal-lg {
-    max-width: 800px;
+    max-width: 842px;
   }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+    .modal-lg {
+    max-width: 1050px;
+  } 
 }
 
 .tooltip {
