@@ -1,0 +1,287 @@
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #ffffff;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #666;
+}
+
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+/* ---------------------------------------------------
+    NAVBAR STYLE
+----------------------------------------------------- */
+.navbar {
+    border: none;
+    border-radius: 0;
+    display: block;
+    height: 5.5em;
+    margin-bottom: 0px;
+    background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.navbar-default .btn-link {
+    color: #fff;
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+    height: 2.188em;
+    margin: .5em .5em;
+}
+
+.navbar img {
+    color: white;
+    height: 2.188em;
+    line-height: 2.188em;
+    margin: .5em .5em;
+    position: relative;
+}
+
+.logo{
+    display: inline-block;
+    margin: auto;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, 0);
+}
+
+/* ---------------------------------------------------
+    LEFT TOP SIDE STYLE
+----------------------------------------------------- */
+.left-half{
+    position: absolute;
+    left: 1%;
+    width: 50%;
+}
+
+.line {
+    width: 95%;
+    height: 1px;
+    border-bottom: 1px solid #ddd;
+    margin: 40px auto;
+}
+
+#cc {
+    max-width: 100%;
+    border: 0;
+}
+
+/* ---------------------------------------------------
+    RIGHT TOP SIDE STYLE
+----------------------------------------------------- */
+.right-half{
+    position: absolute;
+    right: 0px;
+    width: 50%;
+}
+
+label {
+    font-weight: normal;
+    color: #666;
+}
+
+#inputSS {
+    font-size: 1.5em;
+    color: #666;
+    text-align: left;
+    padding-right: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#inputSS span {
+    font-size: small;
+    padding-top: .5em;
+}
+
+/* ---------------------------------------------------
+    FOLLOW US & SOCIAL MEDIA ICON STYLE
+----------------------------------------------------- */
+
+.bottombottom {
+    position: absolute;
+    top: 90%;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #CCC;
+    text-align: center;
+}
+
+.socialmediaicon {
+    display: inline-block;
+    font-size: 1.25em;
+    padding: .25em;
+}
+
+/* ---------------------------------------------------
+    SECTION AFTER FOLLOW US STYLE
+----------------------------------------------------- */
+.verybottom {
+    position: absolute;
+    top: 95%;
+    width: 100%;
+    background-color: #f7f7f7;
+    padding: 1em 0 1.25em .625em
+}
+
+.verybottom h4 {
+    text-align: center;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    height: 100vh;
+    z-index: 999;
+    background: #232323;
+    color: #fff;
+    transition: all 0.3s;
+    overflow-y: auto;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+#sidebar.active {
+    left: 0;
+}
+
+#dismiss {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    background: #232323;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+#dismiss:hover {
+    background: #fff;
+    color: #232323;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+    display: none;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #232323;
+}
+
+#sidebar ul.components {
+    padding: 20px 0px 0px 0px;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: .5em 1.25em;
+    background-color: #232323;
+}
+
+#sidebar ul li a {
+    padding: .57em 1.25em;
+    font-size: 1.1em;
+    display: block;
+    background-color: #323232;
+}
+#sidebar ul li a:hover {
+    color: #323232;
+    background: #fff;
+}
+
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+    color: #fff;
+    background: #323232;
+}
+
+.sidemenu_footer{
+    font-size: .75em;
+    padding: 1.125em .5em 1.125em 1.25em;
+    background-color: #232323;
+}
+
+#sidebar .sidemenu_footer li a{
+    background-color: #232323;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
+    content: '\e259';
+    display: block;
+    position: absolute;
+    right: 20px;
+    font-family: 'Glyphicons Halflings';
+    font-size: 0.6em;
+}
+a[aria-expanded="true"]::before {
+    content: '\e260';
+}
+
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #323232;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+#content {
+    width: 100%;
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
